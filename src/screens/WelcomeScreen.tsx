@@ -56,7 +56,7 @@ const WelcomeScreen = ({navigation}) => {
                 'Answer 8 Real-Life Scenarios Based On Wartime Berlin. Your Choices Unlock True Stories Of People Who Faced The Same Moral Dilemmas — Sometimes With Grave Consequences. No Right Answers. Just Truth.',
             buttonText: 'START EXPLORING',
             onButtonPress: () => {
-                navigation.navigate('InitialScreen');
+                navigation.navigate('MainTab');
             },
         },
     ];
@@ -64,7 +64,7 @@ const WelcomeScreen = ({navigation}) => {
     const currentScreen = screensData[screenIndex];
 
     return (
-        <ImageBackground source={currentScreen.backgroundImage} style={styles.background}>
+        <ImageBackground source={require('../AppManager/src/Slice3.jpeg')} style={styles.background}>
             <View
 
                 style={styles.gradientOverlay}
@@ -98,6 +98,7 @@ const styles = StyleSheet.create({
     },
     gradientOverlay: {
         flex: 1,
+        opacity: 0.5,
         padding: 20,
         paddingTop: 100,
         justifyContent: 'space-between',
